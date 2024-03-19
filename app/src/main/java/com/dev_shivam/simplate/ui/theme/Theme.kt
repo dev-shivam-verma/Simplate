@@ -1,6 +1,7 @@
 package com.dev_shivam.simplate.ui.theme
 
 import android.app.Activity
+import android.view.View
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme
 import androidx.compose.runtime.CompositionLocalProvider
@@ -97,7 +98,7 @@ fun SimplateTheme(
     val view = LocalView.current
     SideEffect {
         val window = (view.context as Activity).window
-        window.statusBarColor = colors.inversePrimary.toArgb()
+        window.statusBarColor = Color.Transparent.toArgb()
         window.navigationBarColor = Color.Transparent.toArgb()
     }
 
